@@ -1,0 +1,21 @@
+<manifest>
+    <main-class>com.qverkk.kotlin.bots.crafting.spinner.rs3.FlaxSpinner</main-class>
+    <name>Slim Spinner (RS3)</name>
+    <description>Earn cash by making bowstrings.</description>
+    <version>1.0.2</version>
+    <tag-line>Turn flax into bowstrings for easy cash!!</tag-line>
+    <compatibility>
+        <game-type>RS3</game-type>
+    </compatibility>
+    <access>supporter</access>
+    <hidden>false</hidden>
+    <categories>
+        <category>Crafting</category>
+        <category>Moneymaking</category>
+    </categories>
+    <internal-id>QveSpinnerRS3</internal-id>
+    <resources>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SkillTracker.fxml</resource>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SlimUi.fxml</resource>
+    </resources>
+</manifest>

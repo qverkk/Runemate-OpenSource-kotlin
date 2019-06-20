@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308"
+         maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" type="VBox"
+         xmlns="http://javafx.com/javafx/8.0.111">
+    <children>
+        <Label fx:id="skillNameLabel" text="SkillName">
+            <padding>
+                <Insets bottom="5.0" top="5.0"/>
+            </padding>
+        </Label>
+        <ProgressBar fx:id="skillProgressBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                     minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0" progress="0.0"/>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="Time till level: ">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="timeTillLevelLabel" text="0"/>
+            </children>
+            <VBox.margin>
+                <Insets bottom="5.0" top="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <VBox prefWidth="200.0">
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label text="Xp gained: "/>
+                                <Label text="0" fx:id="xpGainedLabel"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label text="Lvl: "/>
+                                <Label fx:id="currentLevelLabel" text="0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets top="5.0"/>
+                    </padding>
+                </VBox>
+                <VBox prefWidth="200.0">
+                    <children>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label text="Xp/h: "/>
+                                <Label text="0" fx:id="xpPerHourLabel"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Label text="Lvls gained: "/>
+                                <Label fx:id="lvlsGainedLabel" text="0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets top="5.0"/>
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0"/>
+            </padding>
+        </HBox>
+        <ToggleButton fx:id="removeTrackerButton" mnemonicParsing="false" text="Remove tracker">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+        </ToggleButton>
+        <Separator>
+            <VBox.margin>
+                <Insets top="5.0"/>
+            </VBox.margin>
+        </Separator>
+    </children>
+</fx:root>

@@ -1,0 +1,21 @@
+<manifest>
+    <main-class>com.qverkk.kotlin.bots.combat.gargoyles.Gargoyles</main-class>
+    <name>Slim Gargoyle</name>
+    <description>Earn cash by making bowstrings.</description>
+    <version>1.0.0</version>
+    <tag-line>Slay gargoyles for insane amount of money!</tag-line>
+    <compatibility>
+        <game-type>RS3</game-type>
+    </compatibility>
+    <access>private</access>
+    <hidden>false</hidden>
+    <categories>
+        <category>Combat</category>
+        <category>Moneymaking</category>
+    </categories>
+    <internal-id>QveGargoylesKotlin</internal-id>
+    <resources>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SkillTracker.fxml</resource>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SlimUi.fxml</resource>
+    </resources>
+</manifest>

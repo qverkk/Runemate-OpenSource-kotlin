@@ -1,0 +1,21 @@
+<manifest>
+    <main-class>com.qverkk.kotlin.bots.crafting.slayerrings.SlayerRings</main-class>
+    <name>Slim Slayer rings</name>
+    <description>Earn cash by making bowstrings.</description>
+    <version>1.0.0</version>
+    <tag-line>Best way to scavenging 3!</tag-line>
+    <compatibility>
+        <game-type>RS3</game-type>
+    </compatibility>
+    <access>private</access>
+    <hidden>false</hidden>
+    <categories>
+        <category>Crafting</category>
+        <category>Moneymaking</category>
+    </categories>
+    <internal-id>QveSlayerRingsKotlin</internal-id>
+    <resources>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SkillTracker.fxml</resource>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SlimUi.fxml</resource>
+    </resources>
+</manifest>

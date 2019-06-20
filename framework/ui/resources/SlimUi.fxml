@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" type="VBox" xmlns="http://javafx.com/javafx/8.0.111">
+    <children>
+        <HBox>
+            <children>
+                <VBox alignment="CENTER" style="-fx-background-color: #525252;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="statusLabel" text="Bot status">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="runtimeLabel" text="00:00:00">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" style="-fx-background-color: #525252;" HBox.hgrow="SOMETIMES">
+                    <children>
+                        <Label fx:id="botNameLabel" text="Bot name">
+                            <padding>
+                                <Insets right="20.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="botAuthorLabel" text="Author">
+                            <padding>
+                                <Insets right="20.0"/>
+                            </padding>
+                        </Label>
+                        <Label fx:id="botVersionLabel" text="Version">
+                            <padding>
+                                <Insets right="20.0"/>
+                            </padding>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Separator prefWidth="200.0"/>
+        <TabPane prefHeight="350.0" prefWidth="600.0" rotateGraphic="true" side="LEFT"
+                 style="-fx-border-width: 0; -fx-border-insets: 0;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="300.0"
+                 tabMaxWidth="60.0" tabMinHeight="150.0" tabMinWidth="10.0">
+            <tabs>
+                <Tab closable="false">
+                    <graphic>
+                        <StackPane prefHeight="60.0" prefWidth="62.0" style="-fx-rotate: 90;">
+                            <children>
+                                <HBox alignment="CENTER" maxHeight="60.0" maxWidth="150.0" minHeight="60.0"
+                                      minWidth="150.0" prefHeight="60.0" prefWidth="150.0">
+                                    <children>
+                                        <ImageView fx:id="settingsImageView" fitHeight="50.0" fitWidth="50.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <Label alignment="CENTER" minWidth="80.0" text="Settings"
+                                               textAlignment="CENTER">
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </StackPane>
+                    </graphic>
+                    <content>
+                        <Pane fx:id="botSettingsPane"/>
+                    </content>
+                </Tab>
+                <Tab closable="false">
+                    <content>
+                        <TableView fx:id="profitTableView" prefHeight="200.0" prefWidth="300.0">
+                            <columns>
+                                <TableColumn fx:id="itemName" prefWidth="110.0" text="Item"/>
+                                <TableColumn fx:id="itemAmount" prefWidth="120.0" text="Amount"/>
+                                <TableColumn fx:id="amountHrCol" prefWidth="75.0" text="Amount hr"/>
+                                <TableColumn fx:id="itemProfit" prefWidth="110.0" text="Profit"/>
+                                <TableColumn fx:id="itemProfitHr" prefWidth="110.0" text="Profit hr"/>
+                            </columns>
+                        </TableView>
+                    </content>
+                    <graphic>
+                        <StackPane prefHeight="60.0" prefWidth="62.0" style="-fx-rotate: 90;">
+                            <children>
+                                <HBox alignment="CENTER" maxHeight="60.0" maxWidth="150.0" minHeight="60.0"
+                                      minWidth="150.0" prefHeight="60.0" prefWidth="150.0">
+                                    <children>
+                                        <ImageView fx:id="profitImageView" fitHeight="50.0" fitWidth="50.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <Label alignment="CENTER" minWidth="80.0" text="Profit&#10;Tracker"
+                                               textAlignment="CENTER">
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </StackPane>
+                    </graphic>
+                </Tab>
+                <Tab>
+                    <graphic>
+                        <StackPane prefHeight="60.0" prefWidth="62.0" style="-fx-rotate: 90;">
+                            <children>
+                                <HBox alignment="CENTER" maxHeight="60.0" maxWidth="150.0" minHeight="60.0"
+                                      minWidth="150.0" prefHeight="60.0" prefWidth="150.0">
+                                    <children>
+                                        <ImageView fx:id="skillImageView" fitHeight="50.0" fitWidth="50.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <Label alignment="CENTER" minWidth="80.0" text="Skills&#10;Tracker&#10;"
+                                               textAlignment="CENTER">
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </StackPane>
+                    </graphic>
+                    <content>
+                        <ScrollPane fitToWidth="true">
+                            <content>
+                                <VBox fx:id="skillTrackersPane"/>
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Separator prefWidth="200.0"/>
+        <Label alignment="CENTER" text="Having issues with the bot?"/>
+        <Hyperlink fx:id="botThreadHyperlink" text="Click here and describe the issue"/>
+    </children>
+</fx:root>
