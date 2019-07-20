@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="settingsAnchor" visible="false">
+         <children>
+            <HBox prefWidth="600.0" spacing="50.0">
+               <children>
+                  <Button fx:id="progressiveBtn" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="Progressive" />
+                  <Button fx:id="miningBtn" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="Mining" />
+                  <Button fx:id="smithingBtn" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="Smithing" />
+                  <Button fx:id="smeltingBtn" mnemonicParsing="false" prefHeight="75.0" prefWidth="150.0" text="Smelting" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="miningAnchor" visible="false">
+         <children>
+            <VBox prefWidth="600.0">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Button fx:id="miningBackBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Back" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Mining">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Location" />
+                        <Label text="Rock type" GridPane.rowIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Mode" GridPane.rowIndex="2" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="Position " />
+                              <Label text="0, 0, 0" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" prefWidth="150.0" text="Get position" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Distance to mine in" GridPane.rowIndex="4" />
+                        <Spinner editable="true" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Start mining">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="smithingAnchor" visible="false">
+         <children>
+            <VBox prefWidth="600.0">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Button fx:id="smithingBackBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Back" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Smithing">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Bar type" />
+                        <Label text="Armory type" GridPane.rowIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Bars per item" GridPane.rowIndex="2" />
+                        <Label text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Location" GridPane.rowIndex="3" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+                  <Label alignment="CENTER" prefWidth="600.0" text="Re-stocking" />
+                  <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="600.0" text="Enable restocking">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Amount to restock" />
+                        <Spinner disable="true" editable="true" GridPane.columnIndex="1" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Start smithing">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="smeltingAnchor" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <VBox prefWidth="600.0">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Button fx:id="smeltingBackBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Back" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Smelting">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Location" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Bar type" GridPane.rowIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Label text="Requirements" />
+                  <TextArea disable="true" prefHeight="50.0" prefWidth="200.0" />
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label alignment="CENTER" prefWidth="600.0" text="Re-stocking" />
+                  <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="600.0" text="Enable restocking">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Restock for X bars" />
+                        <Spinner disable="true" editable="true" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Start smelting">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="progressiveAnchor" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <VBox prefWidth="600.0">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Button fx:id="progressiveBackBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Back" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Progressive">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Bar type" />
+                        <Label text="Armory type" GridPane.rowIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Bars per item" GridPane.rowIndex="2" />
+                        <Label text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Location" GridPane.rowIndex="3" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Amount to smith per trip" GridPane.rowIndex="4" />
+                        <Spinner prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Label text="Settings such as mining/smelting will be generated differently for each account thanks to PlayerSense">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Start progressive" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</fx:root>

@@ -1,0 +1,33 @@
+<manifest>
+    <main-class>com.qverkk.kotlin.bots.aio.smither.Smither</main-class>
+    <name>Qve AIO Smither (PRO)</name>
+    <description></description>
+    <version>1.0.0</version>
+    <tag-line>Smith</tag-line>
+    <tags>
+        <tag>Smithing</tag>
+        <tag>Mining</tag>
+        <tag>Smelting</tag>
+        <tag>Smelter</tag>
+        <tag>Ironman</tag>
+    </tags>
+    <compatibility>
+        <game-type>RS3</game-type>
+        <game-type>OSRS</game-type>
+    </compatibility>
+    <hidden>false</hidden>
+    <access>public</access>
+    <categories>
+        <category>Mining</category>
+        <category>Smithing</category>
+        <category>Other</category>
+        <category>Moneymaking</category>
+    </categories>
+    <price>0.07</price>
+    <internal-id>QAioSmitherPro</internal-id>
+    <resources>
+        <resource>com/qverkk/kotlin/bots/aio/smither/ui/resources/Settings.fxml</resource>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SkillTracker.fxml</resource>
+        <resource>com/qverkk/kotlin/framework/ui/resources/SlimUi.fxml</resource>
+    </resources>
+</manifest>
